@@ -1,79 +1,39 @@
-This project was bootstrapped with [Create Contentful App](https://github.com/contentful/create-contentful-app).
+# Contentful Home App
+
+A Contentful app to customize the home location.
+
+![Screenshot of the app](./docs/home%20app.png)
 
 ## How to use
 
-Execute create-contentful-app with npm, npx or yarn to bootstrap the example:
+### 1. Generate Contentful Preview API Token
 
-```bash
-# npx
-npx create-contentful-app --typescript
+Follow the instructions mentioned [here](https://www.contentful.com/developers/docs/references/authentication/) to generate your API key. You need the Contentful Preview API token to configure the app.
 
-# npm
-npm init contentful-app -- --typescript
+### 2. Install the app
 
-# Yarn
-yarn create contentful-app --typescript
-```
+There are two ways you can install the application. You can either install the app directly or clone the repository and self-host it.
 
-## Available Scripts
+#### a. Install with one-click!
 
-In the project directory, you can run:
+Click on the button below to install the application in your Contentful space.
 
-#### `npm start`
+[![Install to Contentful](https://www.ctfstatic.com/button/install-small.svg)](https://app.contentful.com/deeplink?link=apps&id=5H7OhSgm1OfcrCKkbU3MIh)
 
-Creates or updates your app definition in Contentful, and runs the app in development mode.
-Open your app to view it in the browser.
+#### b. Self-host
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+1. Clone/fork the repository.
+2. Deploy it to Vercel/Netlify or any other hosting platform.
+3. Create a new app definition and enter the generated URL in the Frontend field.
 
-#### `npm run build`
+### 3. Change the home setting
 
-Builds the app for production to the `build` folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. In your Contentful space go to Settigns > Home.
+2. Select the installed app and click on Save.
 
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
+## Contribute
 
-#### `npm run upload`
-
-Uploads the build folder to contentful and creates a bundle that is automatically activated.
-The command guides you through the deployment process and asks for all required arguments.
-Read [here](https://www.contentful.com/developers/docs/extensibility/app-framework/create-contentful-app/#deploy-with-contentful) for more information about the deployment process.
-
-#### `npm run upload-ci`
-
-Similar to `npm run upload` it will upload your app to contentful and activate it. The only difference is   
-that with this command all required arguments are read from the environment variables, for example when you add
-the upload command to your CI pipeline.
-
-For this command to work, the following environment variables must be set: 
-
-- `CONTENTFUL_ORG_ID` - The ID of your organization
-- `CONTENTFUL_APP_DEF_ID` - The ID of the app to which to add the bundle
-- `CONTENTFUL_ACCESS_TOKEN` - A personal [access token](https://www.contentful.com/developers/docs/references/content-management-api/#/reference/personal-access-tokens)
-
-## Libraries to use
-
-To make your app look and feel like Contentful use the following libraries:
-
-- [Forma 36](https://f36.contentful.com/) – Contentful's design system
-- [Contentful Field Editors](https://www.contentful.com/developers/docs/extensibility/field-editors/) – Contentful's field editor React components
-
-## Using the `contentful-management` SDK
-
-In the default create contentful app output, a contentful management client is
-passed into each location. This can be used to interact with Contentful's
-management API. For example
-
-```js
-  // Use the client
-  cma.locale.getMany({}).then((locales) => console.log(locales))
-
-```
-
-Visit the [`contentful-management` documentation](https://www.contentful.com/developers/docs/extensibility/app-framework/sdk/#using-the-contentful-management-library)
-to find out more.
+Want to help make the app better? We are open to contribution. If you find a bug, open an issue, or if you want a new feature, feel to open a PR 🎉
 
 ## Learn More
 
